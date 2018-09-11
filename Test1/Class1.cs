@@ -6,12 +6,8 @@ namespace Test1
 {
     internal class TestFileStreamC : TestFileStream, IDisposable
     {
-        private string fileName;
-        private string filePath;
-        private long fileSize;
         private FileStream fileStream;
         private StreamReader streamReader;
-        private Encoding fileEncoding;
         private readonly byte[] Unicode = new byte[] { 0xFF, 0xFE };
         private readonly byte[] UnicodeBIG = new byte[] { 0xFE, 0xFF, 0x00 };
         private readonly byte[] UTF8 = new byte[] { 0xEF, 0xBB, 0xBF }; //带BOM
@@ -19,27 +15,28 @@ namespace Test1
 
         public TestFileStreamC(String filePath)
         {
-            this.filePath = filePath;
+            this.FilePath = filePath;
             fileStream = GetFileStreamToOpen();
-            fileEncoding = GetEncoding(fileStream);
-            streamReader = new StreamReader(fileStream, fileEncoding);
-            var fileinfo = new FileInfo(this.filePath);
-            fileName = fileinfo.Name;
-            fileSize = fileinfo.Length;
+            FileEncoding = GetEncoding(fileStream);
+            streamReader = new StreamReader(fileStream, FileEncoding);
+            var fileinfo = new FileInfo(this.FilePath);
+            FileName = fileinfo.Name;
+            FileSize = fileinfo.Length;
         }
 
-        public string FilePath { get => filePath; set => filePath = value; }
-        public string FileName { get => fileName; set => fileName = value; }
-        public long FileSize { get => fileSize; }
-        public Encoding FileEncoding { get => fileEncoding; }
+        public string FilePath { get; set; }
+        public string FileName { get; set; }
+        public long FileSize { get; }
+        public Encoding FileEncoding { get; }
 
-        public string GetFileDir() => filePath;
 
-        public string GetFileName() => fileName;
+        public string GetFileDir() => FilePath;
+
+        public string GetFileName() => FileName;
 
         private FileStream GetFileStreamToOpen()
         {
-            return new FileStream(this.filePath, FileMode.Open);
+            return new FileStream(this.FilePath, FileMode.Open);
         }
 
         public string ReadLine()
