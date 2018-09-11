@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 
-namespace Test1
+namespace Caspar.CSharpTest
 {
-    internal interface TestFileStream
+    internal interface ITestFileStream
     {
         String GetFileName();
 

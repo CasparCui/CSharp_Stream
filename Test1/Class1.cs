@@ -2,9 +2,9 @@
 using System.IO;
 using System.Text;
 
-namespace Test1
+namespace Caspar.CSharpTest
 {
-    internal class TestFileStreamC : TestFileStream, IDisposable
+    internal class TestFileStreamC : ITestFileStream, IDisposable
     {
         private FileStream fileStream;
         private StreamReader streamReader;
@@ -13,7 +13,7 @@ namespace Test1
         private readonly byte[] UTF8 = new byte[] { 0xEF, 0xBB, 0xBF }; //带BOM
         private const int length_1M = 10 * 10;//for test 10 * 10;//静态变量会在编译时完成计算，此处写计算值对系统开销可以忽略。
 
-        public TestFileStreamC(String filePath)
+        public TestFileStreamC(string filePath)
         {
             this.FilePath = filePath;
             fileStream = GetFileStreamToOpen();
@@ -50,7 +50,7 @@ namespace Test1
             streamReader.Close();
         }
 
-        public System.Text.Encoding GetEncoding(FileStream fs)
+        public Encoding GetEncoding(FileStream fs)
         {
             //定义 数组后使用可以加快调用速度，这个地方需要写成编译时常量。
 

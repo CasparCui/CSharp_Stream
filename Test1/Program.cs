@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Test1
+namespace Caspar.CSharpTest
 {
     internal class Program
     {
