@@ -1,5 +1,8 @@
 <employee xmlns="urn:empl-hire">
+    <ID value ="3331">12363</ID>
+    <ID value ="3332">12364</ID>
     <ID value ="3333">12365</ID>
+    <ID value ="3334">12366</ID>
     <hire-date>2003-01-08</hire-date>
     <title>Accountant</title>
 </employee>

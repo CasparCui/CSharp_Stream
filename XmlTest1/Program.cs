@@ -9,7 +9,7 @@ namespace Caspar.CSharpTest
     {
         private static void Main(string[] args)
         {
-            XmlReaderAndWriter.UseXmlWriter();
+            XmlDocumentDemo.XmlDocumentWriteDemo("./xml1.xml");
             Console.ReadLine();
         }
     }
