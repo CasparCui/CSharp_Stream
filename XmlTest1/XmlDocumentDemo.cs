@@ -33,7 +33,6 @@ namespace Caspar.CSharpTest
                 tempElement.InnerText = "haha";
                 tempElement.Attributes.Append(xmlDoc.CreateAttribute("xixi"));
                 xmlNode.AppendChild(tempElement as XmlNode);
-                
             }
             xmlDoc.Save(path);
         }
