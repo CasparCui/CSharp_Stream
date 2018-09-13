@@ -1,15 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdvancedFeature.cs
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            FormatDemo demo = new FormatDemo();
+
+            var formatDemoFormater = new FormatDemoFormater();
+            Console.WriteLine(formatDemoFormater.Format("+", demo, null));
+            Console.WriteLine(formatDemoFormater.Format("Add", demo, null));
+            Console.WriteLine(formatDemoFormater.Format("-", demo, null));
+            Console.WriteLine(formatDemoFormater.Format("menas", demo, null));
+            Console.WriteLine(demo.ToString());
+            Console.ReadLine();
+
+
         }
     }
 }
