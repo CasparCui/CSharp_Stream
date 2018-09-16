@@ -6,8 +6,9 @@ namespace AdvancedFeature.cs
     {
         private static void Main(string[] args)
         {
-            DelegateDemo.TryToDoDelegate();
-
+            GenericTester.GenericDemoTestInt();
+            GenericTester.GenericDemoTestString();
+            GenericTester.GenericeDemoTestWhereTheObjectIsComparable();
         }
     }
 }

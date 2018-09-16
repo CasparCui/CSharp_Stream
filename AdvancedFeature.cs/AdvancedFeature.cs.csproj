@@ -47,6 +47,7 @@
     <Compile Include="DelegateDemo.cs" />
     <Compile Include="DynamicDemo.cs" />
     <Compile Include="FormatDomo.cs" />
+    <Compile Include="GenericDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
