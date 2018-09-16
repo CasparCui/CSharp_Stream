@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace AdvancedFeature.cs
 {
-    internal class GenericDemo<T> : System.Collections.IEnumerable
+    internal class GenericDemo<T> : IEnumerable<T>
     {
         public T[] array;
 
@@ -13,6 +14,11 @@ namespace AdvancedFeature.cs
         }
 
         public T[] Array { get => array; set => array = value; }
+
+        //public IEnumerator GetEnumerator()
+        //{
+        //    return ((IEnumerable<T>) Array).GetEnumerator();
+        //}
 
         public IEnumerator GetEnumerator()
         {
@@ -30,6 +36,11 @@ namespace AdvancedFeature.cs
         public void SetItem(int index, T value)
         {
             Array[index] = value;
+        }
+
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            return ((IEnumerable<T>) Array).GetEnumerator();
         }
     }
 
