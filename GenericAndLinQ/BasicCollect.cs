@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Caspar.CSharpTest
 { 
-    class BasicCollect<T> : ICollection<T>,IEnumerable<T>
+    class BasicCollect<T> : ICollection<T>
     {
-        protected List<T> demo;
+        protected ICollection<T> demo;
 
         public BasicCollect()
         {
@@ -48,10 +48,7 @@ namespace Caspar.CSharpTest
 
         public IEnumerator<T> GetEnumerator()
         {
-            for(int i = 0; i<demo.Count;i++)
-            {
-                yield return demo[i];
-            }
+            return demo.GetEnumerator();
         }
 
         public bool Remove(T item)
@@ -61,10 +58,7 @@ namespace Caspar.CSharpTest
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            for (int i = 0; i < demo.Count; i++)
-            {
-                yield return demo[i];
-            }
+            return demo.GetEnumerator();
         }
     }
 }
