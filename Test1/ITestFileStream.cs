@@ -13,6 +13,7 @@ namespace Caspar.CSharpTest
         string FilePath { get; set; }
         long FileSize { get; }
         Encoding FileEncoding { get; }
+
         String ReadLine();
     }
 }

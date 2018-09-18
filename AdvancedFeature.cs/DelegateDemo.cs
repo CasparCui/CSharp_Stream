@@ -5,13 +5,11 @@
         public void DoSomething1()
         {
             System.Console.WriteLine("DoSomething1");
-
         }
 
         public void DoSomething2()
         {
             System.Console.WriteLine("DoSomething2");
-
         }
     }
 

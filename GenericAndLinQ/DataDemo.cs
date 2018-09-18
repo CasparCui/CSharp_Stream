@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
-namespace Caspar.CSharpTest
-{ 
-    internal class DataDemo 
+﻿namespace Caspar.CSharpTest
+{
+    internal class DataDemo
     {
         public string Property1 { get; set; } = "123";
         public string Property2 { get; } = "1234";

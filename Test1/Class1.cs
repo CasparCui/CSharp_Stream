@@ -29,7 +29,6 @@ namespace Caspar.CSharpTest
         public long FileSize { get; }
         public Encoding FileEncoding { get; }
 
-
         public string GetFileDir() => FilePath;
 
         public string GetFileName() => FileName;
@@ -75,7 +74,6 @@ namespace Caspar.CSharpTest
                 {
                     for (int j = i / (length_1M); j > 0; j--)
                     {
-                        
                         ss = r.ReadBytes(length_1M);
                         var encoding = CheckEncoding(ss);
                         if (encoding.Equals(Encoding.UTF8))
@@ -88,7 +86,7 @@ namespace Caspar.CSharpTest
                             continue;
                         }
                         else { reVal = encoding; }
-                        if(j>128)
+                        if (j > 128)
                         {
                             j -= 10;
                         }//单一文件超过128M，仅调查最后100M，前面部分进行抽样调查。

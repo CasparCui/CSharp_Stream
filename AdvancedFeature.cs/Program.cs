@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AdvancedFeature.cs
+﻿namespace AdvancedFeature.cs
 {
     internal class Program
     {

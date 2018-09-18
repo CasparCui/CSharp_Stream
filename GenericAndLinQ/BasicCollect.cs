@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Caspar.CSharpTest
-{ 
-    class BasicCollect<T> : ICollection<T>
+{
+    internal class BasicCollect<T> : ICollection<T>
     {
         protected ICollection<T> demo;
 
@@ -27,7 +23,6 @@ namespace Caspar.CSharpTest
 
         public void Add(T item)
         {
-   
             ((ICollection<T>) demo).Add(item);
         }
 

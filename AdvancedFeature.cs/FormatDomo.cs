@@ -7,20 +7,22 @@ namespace AdvancedFeature.cs
         public readonly int p = 1;
         public readonly int b = 2;
 
-        
         #region IFromattable member
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
             return string.Format("{0} and {1}", p, b);
         }
+
         public override string ToString()
         {
             return string.Format("{0} and {1}", p, b);
         }
+
         #endregion IFromattable member
     }
-    internal class FormatDemoFormater : IFormatProvider,ICustomFormatter
+
+    internal class FormatDemoFormater : IFormatProvider, ICustomFormatter
     {
         public string Format(string format, object arg, IFormatProvider formatProvider)
         {
@@ -47,6 +49,5 @@ namespace AdvancedFeature.cs
         {
             return formatType.Equals(typeof(ICustomFormatter)) ? (this) : null;
         }
-
     }
 }

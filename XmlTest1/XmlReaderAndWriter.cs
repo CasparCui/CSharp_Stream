@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Text;
 using System.IO;
+using System.Text;
 using System.Xml;
+
 namespace Caspar.CSharpTest
 {
-    class XmlReaderAndWriter
+    internal class XmlReaderAndWriter
     {
-        public void UseXmlReader() {
+        public void UseXmlReader()
+        {
             using (XmlReader reader = System.Xml.XmlReader.Create("./xml1.xml"))
             {
                 reader.Read();
@@ -15,6 +17,7 @@ namespace Caspar.CSharpTest
                 s1 = reader.ReadOuterXml();
             }
         }
+
         static public void UseXmlWriter()
         {
             using (MemoryStream ms = new MemoryStream())

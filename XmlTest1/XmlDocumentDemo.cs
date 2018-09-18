@@ -1,11 +1,9 @@
 ﻿using System;
-using System.IO;
-using System.Text;
 using System.Xml;
 
 namespace Caspar.CSharpTest
 {
-    class XmlDocumentDemo
+    internal class XmlDocumentDemo
     {
         public static void XmlDocumentReadDemo(string path)
         {
@@ -14,21 +12,21 @@ namespace Caspar.CSharpTest
             var rootXmlElement = xmlDoc.DocumentElement;
             var xmlElementTemp = rootXmlElement.FirstChild;
             var xmlNodeList = rootXmlElement.GetElementsByTagName("ID");
-            foreach(XmlNode xmlNode in xmlNodeList)
+            foreach (XmlNode xmlNode in xmlNodeList)
             {
                 var value = (xmlNode as XmlElement).GetAttributeNode("value").Value;
                 Console.WriteLine(value);
             }
         }
+
         public static void XmlDocumentWriteDemo(string path)
         {
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(path);
             var rootElement = xmlDoc.DocumentElement;
             XmlNodeList xmlNodeList = rootElement.GetElementsByTagName("ID");
-            foreach(XmlNode xmlNode in xmlNodeList)
+            foreach (XmlNode xmlNode in xmlNodeList)
             {
-
                 var tempElement = xmlDoc.CreateElement("IDT");
                 tempElement.InnerText = "haha";
                 tempElement.Attributes.Append(xmlDoc.CreateAttribute("xixi"));
