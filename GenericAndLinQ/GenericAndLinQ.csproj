@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BasicCollect.cs" />
     <Compile Include="DataDemo.cs" />
+    <Compile Include="LinQDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
