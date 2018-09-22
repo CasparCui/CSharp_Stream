@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace AdvancedFeature.cs
+namespace Caspar.CSharpTest
 {
     internal class DynamicDemo
     {

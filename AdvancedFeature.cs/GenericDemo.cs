@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace AdvancedFeature.cs
+namespace Caspar.CSharpTest
 {
     internal class GenericDemo<T> : IEnumerable<T>
     {

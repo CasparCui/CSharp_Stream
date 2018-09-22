@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedFeature.cs
+namespace Caspar.CSharpTest
 {
     internal class FormatDemo : IFormattable
     {

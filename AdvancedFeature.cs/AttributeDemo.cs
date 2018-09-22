@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedFeature.cs
+namespace Caspar.CSharpTest
 {
     [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = true)]
     internal class AttributeDemo : Attribute

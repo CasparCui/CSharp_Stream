@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace AdvancedFeature.cs
+namespace Caspar.CSharpTest
 {
     internal class CloneDemoDeta : IEquatable<CloneDemoDeta>
     {

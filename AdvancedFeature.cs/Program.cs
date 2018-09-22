@@ -1,4 +1,4 @@
-﻿namespace AdvancedFeature.cs
+﻿namespace Caspar.CSharpTest
 {
     internal class Program
     {
