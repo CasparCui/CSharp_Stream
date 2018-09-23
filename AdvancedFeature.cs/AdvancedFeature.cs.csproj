@@ -46,8 +46,10 @@
     <Compile Include="CloneDemo.cs" />
     <Compile Include="DelegateDemo.cs" />
     <Compile Include="DynamicDemo.cs" />
+    <Compile Include="ExternalFunctionDemo.cs" />
     <Compile Include="FormatDomo.cs" />
     <Compile Include="GenericDemo.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

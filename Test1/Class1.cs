@@ -8,9 +8,9 @@ namespace Caspar.CSharpTest
     {
         private FileStream fileStream;
         private StreamReader streamReader;
-        private readonly byte[] Unicode = new byte[] { 0xFF, 0xFE };
-        private readonly byte[] UnicodeBIG = new byte[] { 0xFE, 0xFF, 0x00 };
-        private readonly byte[] UTF8 = new byte[] { 0xEF, 0xBB, 0xBF }; //带BOM
+        private readonly byte[] Unicode = { 0xFF, 0xFE };
+        private readonly byte[] UnicodeBIG = { 0xFE, 0xFF, 0x00 };
+        private readonly byte[] UTF8 = { 0xEF, 0xBB, 0xBF }; //带BOM
         private const int length_1M = 10 * 10;//for test 10 * 10;//静态变量会在编译时完成计算，此处写计算值对系统开销可以忽略。
 
         public TestFileStreamC(string filePath)

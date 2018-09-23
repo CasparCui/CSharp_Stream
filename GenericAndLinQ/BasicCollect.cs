@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Caspar.CSharpTest
 {
     internal class BasicCollect<T> : ICollection<T>
-                            where T : DataDemo, IEquatable<T>
+                            where T : IEquatable<T>
     {
         protected ICollection<T> demo;
 

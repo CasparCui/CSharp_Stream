@@ -1,12 +1,16 @@
 ﻿namespace Caspar.CSharpTest
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            GenericTester.GenericDemoTestInt();
-            GenericTester.GenericDemoTestString();
-            GenericTester.GenericeDemoTestWhereTheObjectIsComparable();
+            if (args == null)
+            {
+                throw new System.ArgumentNullException(nameof(args));
+            }
+
+            string s = "123";
+            s.Print();
         }
     }
 }

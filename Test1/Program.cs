@@ -23,6 +23,11 @@ namespace Caspar.CSharpTest
 
         private static void Main(string[] args)
         {
+            if (args == null)
+            {
+                throw new ArgumentNullException(nameof(args));
+            }
+
             using (var fileStreamTest = new TestFileStreamC(@"C:\Users\caspar\Desktop\TKYSPWFD11-20180523-1531.log"))
             {
                 for (int i = 0; i < 10; i++)
