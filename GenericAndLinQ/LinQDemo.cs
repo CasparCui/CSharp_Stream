@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Caspar.CSharpTest
 {
@@ -63,8 +64,8 @@ namespace Caspar.CSharpTest
 
         public static void DoALinQJoinDemo()
         {
-            var dataDemoCollection1 = GetADemoCollectionForTest();
-            var dataDemoCollection2 = GetADemo2CollectionForTest();
+            BasicCollect<DataDemo> dataDemoCollection1 = GetADemoCollectionForTest();
+            BasicCollect<DataDemo2> dataDemoCollection2 = GetADemo2CollectionForTest();
             var dataFromLinq = from demo in dataDemoCollection1
                                join demo2 in dataDemoCollection2
                                on demo.NullInt equals demo2.IntData
@@ -79,8 +80,8 @@ namespace Caspar.CSharpTest
                 .Join(dataDemoCollection2, i => i.NullInt, j => j.IntData, (i, j) => new { demo = i, demo2 = j })
                 .Where(d => d.demo.Property1 == d.demo2.StringData)
                 .Select(j => new { IntDataTemp = j.demo2.IntData, StringDataTemp = j.demo.Property2 });
-            var dic = dataFromLinq.ToDictionary(k => k.IntDataTemp, v => v.StringDataTemp);
-            var dic2 = dataFromLambda.ToDictionary(k => k.IntDataTemp, v => v.StringDataTemp);
+            Dictionary<int, string> dic = dataFromLinq.ToDictionary(k => k.IntDataTemp, v => v.StringDataTemp);
+            Dictionary<int, string> dic2 = dataFromLambda.ToDictionary(k => k.IntDataTemp, v => v.StringDataTemp);
         }
     }
 }
