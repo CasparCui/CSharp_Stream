@@ -135,8 +135,8 @@ namespace Caspar.CSharpTest
             //BasicCollect<DataDemo2> dataDemoCollection = GetADemo2CollectionForTest();
             //var skipListByLambda = dataDemoCollection.Skip(3);
             var dataDemoCollection = new int[] { -1,1,2,3};
-            int[] datademo = { -1, 2, 3, 5 };
-            IEnumerable<int> skipWhileByLambda = datademo.OrderByDescending(s=>s).SkipWhile(grade => grade >= 0);
+            int[] datademo = { -1, 2, 3, 6,3 };
+            IEnumerable<int> skipWhileByLambda = datademo.SkipWhile(grade => grade/2!=3);
             foreach (var i in skipWhileByLambda)
             {
                 Console.Write(i + ",");
