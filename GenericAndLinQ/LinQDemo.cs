@@ -129,6 +129,30 @@ namespace Caspar.CSharpTest
                 Console.WriteLine(s);
             }
         }
-        //public static void DoALinqSkip
+
+        public static void DoALinqSkipAndWhileSkipDemo()
+        {
+            //BasicCollect<DataDemo2> dataDemoCollection = GetADemo2CollectionForTest();
+            //var skipListByLambda = dataDemoCollection.Skip(3);
+            var dataDemoCollection = new int[] { -1,1,2,3};
+            int[] datademo = { -1, 2, 3, 5 };
+            IEnumerable<int> skipWhileByLambda = datademo.OrderByDescending(s=>s).SkipWhile(grade => grade >= 0);
+            foreach (var i in skipWhileByLambda)
+            {
+                Console.Write(i + ",");
+            }
+            int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
+
+            IEnumerable<int> lowerGrades =
+                datademo
+                .OrderByDescending(grade => grade)
+                .SkipWhile(grade => grade >= 0);
+
+            Console.WriteLine("All grades below 80:");
+            foreach (int grade in lowerGrades)
+            {
+                Console.WriteLine(grade);
+            }
+        }
     }
 }
