@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Caspar.CSharpTest
 {
@@ -83,5 +83,52 @@ namespace Caspar.CSharpTest
             Dictionary<int, string> dic = dataFromLinq.ToDictionary(k => k.IntDataTemp, v => v.StringDataTemp);
             Dictionary<int, string> dic2 = dataFromLambda.ToDictionary(k => k.IntDataTemp, v => v.StringDataTemp);
         }
+
+        public static void DoALinQOrderByDemo()
+        {
+            BasicCollect<DataDemo2> dataDemoCollection = GetADemo2CollectionForTest();
+            var dataForLinq = from demo in dataDemoCollection
+                              orderby demo.IntData
+                              select new
+                              {
+                                  demo.IntData,
+                                  StringData1 = demo.StringData,
+                                  demo.StringData2
+                              };
+            var dataForLambda = dataDemoCollection.OrderBy(k => k.IntData).Select(j => new { j.IntData, StringData1 = j.StringData, j.StringData2 });
+            foreach (var demo in dataForLinq)
+            {
+                Console.WriteLine("IntData: {0}, StringData1: {1}, StringData2: {2}", demo.IntData, demo.StringData1, demo.StringData2);
+            }
+            foreach (var demo in dataForLambda)
+            {
+                Console.WriteLine("`IntData: {0}, StringData1: {1}, StringData2: {2}", demo.IntData, demo.StringData1, demo.StringData2);
+            }
+        }
+
+        public static void DoALinqOfTypeAndCastDemo()
+        {
+            var objArray = new object[] { 123, "234", 345, "456" };
+            try
+            {
+                var stringArray = objArray.Cast<String>().ToArray();
+                foreach (var s in stringArray)
+                {
+                    Console.WriteLine("Cast");
+                    Console.WriteLine(s);
+                }
+            }
+            catch (InvalidCastException e)
+            {
+                Console.WriteLine(e);
+            }
+            var stringArray2 = objArray.OfType<String>().ToArray();
+            foreach (var s in stringArray2)
+            {
+                Console.WriteLine("OfType");
+                Console.WriteLine(s);
+            }
+        }
+        //public static void DoALinqSkip
     }
 }

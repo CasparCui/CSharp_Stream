@@ -8,7 +8,7 @@ namespace Caspar.CSharpTest
         static void Main(string[] args)
 #pragma warning restore RECS0154 // Parameter is never used
         {
-            LinQDemo.DoALinQJoinDemo();
+            LinQDemo.DoALinqOfTypeAndCastDemo();
         }
     }
 }
