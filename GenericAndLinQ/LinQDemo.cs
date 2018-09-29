@@ -134,13 +134,18 @@ namespace Caspar.CSharpTest
         {
             //BasicCollect<DataDemo2> dataDemoCollection = GetADemo2CollectionForTest();
             //var skipListByLambda = dataDemoCollection.Skip(3);
-            var dataDemoCollection = new int[] { -1,1,2,3};
-            int[] datademo = { -1, 2, 3, 6,3 };
-            IEnumerable<int> skipWhileByLambda = datademo.SkipWhile(grade => grade/2!=3);
+            var dataDemoCollection = new int[] { -1, 1, 2, 3 };
+            int[] datademo = { -1, 2, 3, 6, 3 };
+            IEnumerable<int> skipWhileByLambda = datademo.SkipWhile(grade => grade / 2 != 3);
             foreach (var i in skipWhileByLambda)
             {
                 Console.Write(i + ",");
             }
+
+            //由于 SkipWhile 可以进行条件筛选，一直 skip 到符合条件的选项为止，所以并不能过滤符合条件的第一项以后的内容。
+            //上面的示例就是利用 SkipWhile 进行筛选后，前面的三项被筛除，后面最后一项的 3 尽管不符合条件，但是也会被保留。
+            //如果想要删除，可以直接使用 Where 方法。
+
             int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
 
             IEnumerable<int> lowerGrades =
