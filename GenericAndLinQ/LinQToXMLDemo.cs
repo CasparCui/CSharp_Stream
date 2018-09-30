@@ -1,7 +1,6 @@
-﻿using System.Xml.Linq;
-using System.Xml;
+﻿using System;
 using System.Linq;
-using System;
+using System.Xml.Linq;
 
 namespace Caspar.CSharpTest
 {
@@ -10,7 +9,6 @@ namespace Caspar.CSharpTest
         public static XElement CreateLinqXmlTree()
         {
             XElement xEle = new XElement("TestRoot", new XElement[]{
-
                 new XElement("Element",new object [] {
                     new XAttribute("TestAttribute1","hehe1"),
                     new XElement("TestSubSub1", new XAttribute[] {
@@ -38,7 +36,6 @@ namespace Caspar.CSharpTest
                             new XElement("Element2SubSubSub","aiyowoqu"),
                             new XAttribute("elementAttribulte","xixi3"),
                         }))
-
                     }),
                     new XAttribute("elementAttribulte","xixi3")
                 }),
@@ -49,7 +46,6 @@ namespace Caspar.CSharpTest
             });
             Console.WriteLine(xEle.ToString());
             return xEle;
-
         }
 
         public static void SelectANodeByLinQ(XElement xEle)
@@ -59,10 +55,10 @@ namespace Caspar.CSharpTest
             var selectEleEnumerable = from ele in xEleDeepCopy.Elements("Element")
                                       let attri = ele.Attribute("elementAttribulte")
                                       where attri != null && attri.Value == "xixi"
-                                      select new { attri.Value ,ele};
+                                      select new { attri.Value, ele };
             foreach (var ele in selectEleEnumerable)
             {
-                Console.WriteLine(ele.Value + " " + ele.ele.ToString() );
+                Console.WriteLine(ele.Value + " " + ele.ele.ToString());
             }
 
             var selectASubElement = from ele in xEleEnumerable
@@ -71,16 +67,15 @@ namespace Caspar.CSharpTest
                                     let subAttri = subEle.Attribute("TestAttributeSub2")
                                     where subAttri != null
                                     select new { ele, InerXML = subEle.ToString(), subAttri.Name, subAttri.Value };
-                                    
+
             foreach (var ele in selectASubElement)
             {
                 Console.WriteLine(ele.ele);
                 Console.WriteLine(ele.InerXML);
                 Console.WriteLine(ele.Name + ele.Value);
             }
-
-
         }
+
         public static void AddANodeIntoXmlByLinQ(XElement xEle)
         {
             var xEleDeepCopy = new XElement(xEle);
@@ -105,18 +100,18 @@ namespace Caspar.CSharpTest
                     node.AddAnnotation(tempXElement2);
                     node.AddBeforeSelf(tempXElement3);
                     node.AddFirst(tempXElement4);
-                    
+
                     Console.WriteLine(xEleDeepCopy);
                 }
             }
-
         }
+
         public static void RemoveNodeFromXmlByLinQ(XElement xEle)
         {
             var xEleDeepCopy = new XElement(xEle);
             var selectedXElementByLambda = xEleDeepCopy.Elements("Element")
                                            .Where(x => x.Element("Element2Sub3") != null);
-            foreach( XElement ele in selectedXElementByLambda)
+            foreach (XElement ele in selectedXElementByLambda)
             {
                 //ele.RemoveAll();
                 //ele.RemoveAttributes();
@@ -125,20 +120,21 @@ namespace Caspar.CSharpTest
                 Console.WriteLine(xEleDeepCopy);
             }
         }
+
         public static void SetAttributeByLinQ(XElement xEle)
         {
             var xEleDeepCopy = new XElement(xEle);
             var selectedXElementLambda = xEleDeepCopy.Elements()
-                                        .Where(x => x.Attribute("elementAttribulte") != null 
+                                        .Where(x => x.Attribute("elementAttribulte") != null
                                                  && x.Attribute("elementAttribulte").Value == "xixi3");
             foreach (XElement ele in selectedXElementLambda)
             {
                 ele.SetAttributeValue("elementAttribulte", "hehehe3");
                 ele.SetAttributeValue("elementAttribulte2", "hehehe4");
-
             }
             Console.WriteLine(xEleDeepCopy);
         }
+
         public static void ReplaceElementByLinQ(XElement xEle)
         {
             var xEleDeepCopy = new XElement(xEle);
@@ -147,7 +143,7 @@ namespace Caspar.CSharpTest
                                                  && x.Attribute("elementAttribulte").Value == "xixi3");
             var element = new XElement("heheda", new object[] { new XElement("xixixi", "hehehe") });
             var attribute = new XAttribute("xixixix", "animi");
-            foreach(XElement ele in selectedXElementLambda)
+            foreach (XElement ele in selectedXElementLambda)
             {
                 //ele.ReplaceAll(element);
                 //ele.ReplaceNodes(element);
@@ -155,6 +151,5 @@ namespace Caspar.CSharpTest
             }
             Console.WriteLine(xEleDeepCopy);
         }
-        
     }
 }
