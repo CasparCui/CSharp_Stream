@@ -47,6 +47,7 @@
     <Compile Include="DataDemo2.cs" />
     <Compile Include="DataDemo.cs" />
     <Compile Include="LinQDemo.cs" />
+    <Compile Include="LinQToXMLDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

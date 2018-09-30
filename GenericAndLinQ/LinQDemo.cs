@@ -137,9 +137,12 @@ namespace Caspar.CSharpTest
             var dataDemoCollection = new int[] { -1, 1, 2, 3 };
             int[] datademo = { -1, 2, 3, 6, 3 };
             IEnumerable<int> skipWhileByLambda = datademo.SkipWhile(grade => grade / 2 != 3);
-            foreach (var i in skipWhileByLambda)
+            if (skipWhileByLambda != null)
             {
-                Console.Write(i + ",");
+                foreach (var i in skipWhileByLambda)
+                {
+                    Console.Write(i + ",");
+                }
             }
 
             //由于 SkipWhile 可以进行条件筛选，一直 skip 到符合条件的选项为止，所以并不能过滤符合条件的第一项以后的内容。
