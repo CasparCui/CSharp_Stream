@@ -4,17 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC9B0D1E-5E70-41BD-A5DD-2735794D5BB2}</ProjectGuid>
+    <ProjectGuid>{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Caspar.CSharpTest</RootNamespace>
-    <AssemblyName>GenericAndLinQ</AssemblyName>
+    <AssemblyName>ADO.Net_Demo</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -43,12 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicCollect.cs" />
-    <Compile Include="DataDemo2.cs" />
-    <Compile Include="DataDemo.cs" />
-    <Compile Include="LinQDemo.cs" />
-    <Compile Include="LinQToAdoDemo.cs" />
-    <Compile Include="LinQToXMLDemo.cs" />
+    <Compile Include="DataBaseConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

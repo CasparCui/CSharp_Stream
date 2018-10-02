@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedFeature.cs", "Advan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericAndLinQ", "GenericAndLinQ\GenericAndLinQ.csproj", "{FC9B0D1E-5E70-41BD-A5DD-2735794D5BB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.Net_Demo", "ADO.Net_Demo\ADO.Net_Demo.csproj", "{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,14 @@ Global
 		{FC9B0D1E-5E70-41BD-A5DD-2735794D5BB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC9B0D1E-5E70-41BD-A5DD-2735794D5BB2}.Release|x64.ActiveCfg = Release|Any CPU
 		{FC9B0D1E-5E70-41BD-A5DD-2735794D5BB2}.Release|x64.Build.0 = Release|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Debug|x64.Build.0 = Debug|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Release|x64.ActiveCfg = Release|Any CPU
+		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
