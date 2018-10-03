@@ -95,5 +95,6 @@ namespace Caspar.CSharpTest
                            select data;
             var dataView2 = dataRows.AsDataView();
         }
+
     }
 }
