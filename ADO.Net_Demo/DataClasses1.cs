@@ -1,6 +1,5 @@
 namespace Demo
 {
-
     partial class Table
     {
     }

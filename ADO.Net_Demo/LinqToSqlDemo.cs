@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Demo;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Demo;
 
 namespace Caspar.CSharpTest
 {
@@ -14,7 +10,6 @@ namespace Caspar.CSharpTest
             var context = new DataClasses1DataContext();
             var dataRow = from data in context.Table
                           select data;
-
         }
 
         public static void DoUpdateSQLbyLinQDemo()
@@ -23,13 +18,12 @@ namespace Caspar.CSharpTest
             var dataRow = from data in context.Table
                           where data.ID == 2
                           select data;
-            foreach(var data in dataRow)
+            foreach (var data in dataRow)
             {
                 data.Name = "Chuyin Weilai";
             }
-            
-            context.SubmitChanges(System.Data.Linq.ConflictMode.FailOnFirstConflict);
 
+            context.SubmitChanges(System.Data.Linq.ConflictMode.FailOnFirstConflict);
         }
     }
 }

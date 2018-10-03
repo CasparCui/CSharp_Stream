@@ -185,7 +185,5 @@ namespace Caspar.CSharpTest
                 }
             }
         }
-
-
     }
 }
