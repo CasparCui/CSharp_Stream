@@ -84,5 +84,16 @@ namespace Caspar.CSharpTest
                            select dataRow;
             var dt = dataRows.CopyToDataTable();
         }
+
+        public static void SetADataTableIntoADataView(string sqlConnectionString)
+        {
+            var ds = GetADataSetForLinqToSQL(sqlConnectionString);
+            var dataview = ds.Tables[0].AsDataView();
+            var dataRows = from data in ds.Tables["Table"].AsEnumerable()
+                           where data.Field<string>("Sex").TrimEnd() == "male"
+                           orderby data.Field<DateTime>("Birthday") descending
+                           select data;
+            var dataView2 = dataRows.AsDataView();
+        }
     }
 }
