@@ -7,8 +7,9 @@
         private static void Main(string[] args)
 #pragma warning restore RECS0154 // Parameter is never used
         {
-            var element = LinQToXMLDemo.CreateLinqXmlTree();
-            LinQToXMLDemo.ReplaceElementByLinQ(element);
+            LinQToAdoDemo.UsingLinQToSelectDataAndCoypIntoTheOtherDataTable
+                (@"Data Source = (localdb)\ProjectsV13; Initial Catalog = TestaADO.Net; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"
+                );
         }
     }
 }
