@@ -166,10 +166,9 @@ namespace Caspar.CSharpTest
                 }
             }
         }
-        
+
         public static void SqlDataSetToXmlDemo(string sqlConnectionString)
         {
-
             using (DataBaseConnection conn = new DataBaseConnection(sqlConnectionString))
             {
                 SqlCommand cmd = conn.SqlConnection.CreateCommand();
@@ -183,9 +182,7 @@ namespace Caspar.CSharpTest
                     ds.Tables[0].WriteXml(ms);//输出表内容
                     var array = ms.ToArray();
                     var s = Encoding.UTF8.GetString(array, 0, array.Length);
-                    
                 }
-
             }
         }
     }
