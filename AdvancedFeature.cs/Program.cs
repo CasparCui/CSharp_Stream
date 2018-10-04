@@ -9,8 +9,7 @@
                 throw new System.ArgumentNullException(nameof(args));
             }
 
-            string s = "123";
-            s.Print();
+            CallBackDemo.DoCallBackDemo("hehe","xixi");
         }
     }
 }
