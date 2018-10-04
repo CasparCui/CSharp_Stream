@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Caspar.CSharpTest
 {
-    internal class CloneDemoDeta : IEquatable<CloneDemoDeta>
+    class CloneDemoDeta : IEquatable<CloneDemoDeta>
     {
         public string N { get; set; }
 
@@ -41,7 +41,7 @@ namespace Caspar.CSharpTest
         }
     }
 
-    internal class CloneDemo : ICloneable
+    class CloneDemo : ICloneable
     {
         public int P { get; set; } = 1;
         public int Q { get; set; } = 2;

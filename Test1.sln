@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericAndLinQ", "GenericAn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.Net_Demo", "ADO.Net_Demo\ADO.Net_Demo.csproj", "{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{943EC38C-2059-45D5-B237-A66B1352DB2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,14 @@ Global
 		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Release|x64.ActiveCfg = Release|Any CPU
 		{ADAE1D46-A8A7-4961-94E7-B0BDAD05842A}.Release|x64.Build.0 = Release|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Debug|x64.Build.0 = Debug|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Release|x64.ActiveCfg = Release|Any CPU
+		{943EC38C-2059-45D5-B237-A66B1352DB2E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

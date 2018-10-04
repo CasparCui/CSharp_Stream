@@ -2,7 +2,7 @@
 
 namespace Caspar.CSharpTest
 {
-    internal class DynamicDemo
+    internal static class DynamicDemo
     {
         static public void DoDynamic()
         {
