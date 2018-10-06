@@ -7,11 +7,14 @@ namespace Caspar.CSharpTest
     {
         private static void Main(string[] args)
         {
+
             if (args == null)
                 throw new ArgumentNullException(nameof(args));
-            TaskDemo.TaskFactoryDemo();
-            Thread.Sleep(1000);
-
+            for (int i = 0; i < 10; i++)
+            {
+                TaskDemo.TaskAddDemo(i);
+            }
+            Thread.Sleep(2000);
             Console.WriteLine("MainDemo");
         }
     }
