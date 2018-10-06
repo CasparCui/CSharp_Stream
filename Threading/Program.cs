@@ -9,8 +9,7 @@ namespace Caspar.CSharpTest
         {
             if (args == null)
                 throw new ArgumentNullException(nameof(args));
-            var demo = new ThreadingDemo();
-            demo.StratThreadingDemo();
+            TaskDemo.TaskFactoryDemo();
             Thread.Sleep(1000);
 
             Console.WriteLine("MainDemo");
