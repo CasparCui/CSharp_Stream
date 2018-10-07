@@ -10,12 +10,8 @@ namespace Caspar.CSharpTest
 
             if (args == null)
                 throw new ArgumentNullException(nameof(args));
-            for (int i = 0; i < 10; i++)
-            {
-                TaskDemo.TaskAddDemo(i);
-            }
-            Thread.Sleep(2000);
-            Console.WriteLine("MainDemo");
+            AsyncAwaitDemo.AsyncDemo();
+            Console.ReadLine();
         }
     }
 }
