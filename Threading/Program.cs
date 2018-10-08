@@ -10,7 +10,7 @@ namespace Caspar.CSharpTest
 
             if (args == null)
                 throw new ArgumentNullException(nameof(args));
-            AsyncAwaitDemo.AsyncDemo();
+            ParallelDemo.DoParallelContinuumFuncAction();
             Console.ReadLine();
         }
     }
